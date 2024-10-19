@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    /** @use HasFactory<\Database\Factories\BookFactory> */
+  
+
+    protected $primarykey = 'book_id'; //elsődéeges kulcs neve
+
     use HasFactory;
+
+
+    protected $fillable = [
+        'title',
+        'author',
+        'pieces'
+    ];
 }

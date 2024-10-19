@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Copy extends Model
 {
-    /** @use HasFactory<\Database\Factories\CopyFactory> */
+    
+
+    protected $primarykey = 'copy_id'; //elsődéeges kulcs neve
+
     use HasFactory;
+
+    protected $fillable = [
+        'book_id', 
+        'user_id'
+    ];
+
+  
 }
